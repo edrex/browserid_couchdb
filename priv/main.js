@@ -89,7 +89,7 @@ $(document).ready(function() {
 
 function start_login() {
   $("#browserid .login").addClass('pending');
-  navigator.id.getVerifiedEmail(gotVerifiedEmail);
+  navigator.id.get(gotVerifiedEmail);
 }
 
 
