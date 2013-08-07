@@ -141,7 +141,7 @@ verify_id_with_crutch(VerifyURL, Assertion, Audience) ->
     VerifyQS = "assertion=" ++ Assertion ++ "&audience=" ++ Audience,
 
     %% VerifyURL = ?l2b(couch_util:get_value("verify_url", Form,
-    %%                                       "https://browserid.org/verify")),
+    %%                                       "https://verifier.login.persona.org/verify")),
     %% case ibrowse_lib:parse_url(VerifyUrl) of
     %% #url{protocol = https} ->
     %%     % Maybe don't allow non-https providers?
