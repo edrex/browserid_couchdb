@@ -12,7 +12,7 @@
 
 -module(couch_httpd_browserid).
 -include("couch_db.hrl").
--include("../ibrowse/ibrowse.hrl").
+-include("deps/ibrowse/src/ibrowse.hrl").
 
 -export([handle_id_req/1]).
 
