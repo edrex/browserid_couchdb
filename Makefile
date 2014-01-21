@@ -3,7 +3,7 @@ COUCHDB_VERSION=$(shell couch-config --couch-version | sed 's/\+.*//')
 PLUGIN_DIRS=ebin priv
 PLUGIN_DEST=$(shell couch-config --erl-libs-dir)/$(NAME)
 CONFIG_FILES=etc/couchdb/default.d/*.ini 
-ERL_COMPILER_OPTIONS=[{i, "$(shell couch-config --erl-libs-dir)/couch-$(COUCHDB_VERSION)/include"}]
+ERL_COMPILER_OPTIONS="[{i, \"$(shell couch-config --erl-libs-dir)/couch-$(COUCHDB_VERSION)/include\"}]"
 all: compile
 
 compile:
