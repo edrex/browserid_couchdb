@@ -24,7 +24,6 @@ function gotVerifiedEmail(assertion) {
       url = window.BROWSERID_URL;
 
     var to_verify = { 'assertion': window.encodeURIComponent(assertion)
-                    , 'audience' : window.encodeURIComponent(window.location.host)
                     };
 
     $.ajax({
