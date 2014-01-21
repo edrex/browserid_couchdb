@@ -101,7 +101,7 @@ If you are a BrowserID whiz and prefer to do your own thing, include only the `/
     , "audience" : "example.com:80"
     }
 
-The response will be the same as `https://browserid.org/verify`. That URL is currently used for verification. You can use a different one by changing `/_config/httpd/browserid_verify_url`.
+The response will be the same as `https://verifier.login.persona.org/verify`. That URL is currently used for verification. You can use a different one by changing `/_config/httpd/browserid_verify_url`.
 
 ## Building
 
