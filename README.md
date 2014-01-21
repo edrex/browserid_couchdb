@@ -11,7 +11,7 @@ Good. Put this in your Couch app.
     <!DOCTYPE html>
     <html>
       <head>
-        <script src="/_browserid/include.js" type="text/javascript"></script>
+        <script src="https://login.persona.org/include.js" type="text/javascript"></script>
 
         <!-- Optional styles -->
         <link rel="stylesheet" type="text/css" href="/_browserid/style.css">
@@ -95,7 +95,7 @@ To be notified when the login or logout phase completes, use the same functions 
 
 ### Advanced usage
 
-If you are a BrowserID whiz and prefer to do your own thing, include only the `/_browserid/include.js` file and no others. (You can also use `https://browserid.org/include.js` if you don't trust us.) To verify your membership assertion, POST an `application/json` body to `/_browserid`, such as this:
+If you are a BrowserID whiz and prefer to do your own thing, include only the `https://login.persona.org/include.js` file and no others. To verify your membership assertion, POST an `application/json` body to `/_browserid`, such as this:
 
     { "assertion": "<the assertion string goes here>"
     , "audience" : "example.com:80"
