@@ -21,7 +21,7 @@
 %% TODO: 
 %% * Set SSL options so we verify the providers cert
 %% * Possibly auto-create user doc in browserid_authentication_handler/1
-%% * Do something sane with providers other than browserid.org
+%% * Do something sane with providers other than persona.org
 
 % hash_if_required looks for hash_algorithm in browserid section of config
 % if not found, default to hmac to keep backward compat.
@@ -125,7 +125,7 @@ handle_id_req(enabled, Audience, #httpd{method='POST', mochi_req=MochiReq}=Req) 
 
 verify_id(Assertion, Audience) -> ok
     % TODO: Verify without depending on the Mozilla crutch verification web service.
-    %       * https://wiki.mozilla.org/Identity/Verified_Email_Protocol
+    %       * https://github.com/mozilla/id-specs/blob/prod/browserid/index.md
     %       * https://github.com/mozilla/browserid/tree/master/verifier
     , case couch_config:get("browserid", "verify_url", undefined)
         of undefined -> ok
